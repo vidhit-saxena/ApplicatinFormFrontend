@@ -1,0 +1,78 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(to right, #8ac5ec, #c1ec8a);
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  /*background-color: #eb8585;*/
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-form label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: #f7f7f7;
+}
+
+.application-form input[type="file"] {
+  background-color: transparent;
+}
+
+.application-form .team-member-section {
+ /* background-color: #ecf7ff;*/
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.application-form .submitButton {
+  text-align: center;
+}
+
+.application-form .submitButton button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #ed786b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.application-form .submitButton button:hover {
+  background-color: #ff9680;
+}
+
+.qr-info{
+  text-align: center;
+  color: red;
+  font-size: 15px;
+}
