@@ -51,34 +51,7 @@ function ApplicationForm() {
     });
   };
 
-  // Handle file upload for registration proof (Cloudinary)
-  // const handleFileChange = async (e) => {
-  //   const file = e.target.files[0];
-  //   if (file) {
-  //     const uploadData = new FormData();
-  //     uploadData.append('file', file);
-  //     uploadData.append('upload_preset', 'ApplicationForm'); // Replace with your Cloudinary upload preset
-  //     uploadData.append('cloud_name', 'dexvwh9rm'); // Replace with your Cloudinary cloud name
-
-  //     try {
-  //       const response = await axios.post(
-  //         'https://api.cloudinary.com/v1_1/dexvwh9rm/image/upload',
-  //         uploadData
-  //       );
-  //       const imageUrl = response.data.secure_url;
-  //       // Update form data with Cloudinary URL
-  //       setFormData((prevState) => ({
-  //         ...prevState,
-  //         cloudinaryUrl: imageUrl
-  //       }));
-  //       console.log('Image uploaded successfully: ', imageUrl);
-  //       // Set the image URL in the formData if necessary
-  //       setFormData({ ...formData, registrationProof: imageUrl });
-  //     } catch (error) {
-  //       console.error('Error uploading image:', error);
-  //     }
-  //   }
-  // };
+  
 
   // Function to handle file upload to Cloudinary
   const handleFileChange = async (e) => {
@@ -132,8 +105,8 @@ function ApplicationForm() {
     formDataToSend.append('dob', formData.dob);
     formDataToSend.append('qualification', formData.qualification);
     formDataToSend.append('collegeName', formData.collegeName);
-    formDataToSend.append('email', formData.email);
-    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('email', formData.email.toString);
+    formDataToSend.append('phone', formData.phone.toString);
     formDataToSend.append('pinCode', formData.pinCode);
     formDataToSend.append('fatherName', formData.fatherName);
     formDataToSend.append('fatherPhone', formData.fatherPhone);
@@ -305,3 +278,35 @@ function ApplicationForm() {
 }
 
 export default ApplicationForm;
+
+
+
+
+// Handle file upload for registration proof (Cloudinary)
+  // const handleFileChange = async (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const uploadData = new FormData();
+  //     uploadData.append('file', file);
+  //     uploadData.append('upload_preset', 'ApplicationForm'); // Replace with your Cloudinary upload preset
+  //     uploadData.append('cloud_name', 'dexvwh9rm'); // Replace with your Cloudinary cloud name
+
+  //     try {
+  //       const response = await axios.post(
+  //         'https://api.cloudinary.com/v1_1/dexvwh9rm/image/upload',
+  //         uploadData
+  //       );
+  //       const imageUrl = response.data.secure_url;
+  //       // Update form data with Cloudinary URL
+  //       setFormData((prevState) => ({
+  //         ...prevState,
+  //         cloudinaryUrl: imageUrl
+  //       }));
+  //       console.log('Image uploaded successfully: ', imageUrl);
+  //       // Set the image URL in the formData if necessary
+  //       setFormData({ ...formData, registrationProof: imageUrl });
+  //     } catch (error) {
+  //       console.error('Error uploading image:', error);
+  //     }
+  //   }
+  // };
